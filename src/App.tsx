@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ITickets } from './types/type.models';
 import getTickets from './api/get';
 
