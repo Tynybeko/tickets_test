@@ -17,6 +17,6 @@ export default function getTickets(currency: 'RUB' | 'USD' | 'EUR' = 'RUB', tran
             return transfer.includes(item.Пересадки)
         }
         return item
-    })
+    }).sort((a,b) => a.Цена_x0020_в_x0020_дол - b.Цена_x0020_в_x0020_дол)
 }
 
