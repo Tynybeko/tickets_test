@@ -34,7 +34,7 @@ const toLocalDate = (date: string) => {
 interface TicketsListProps {
     params: { [key: string]: any }
 }
-export default function TicketsList({ params = {} }: TicketsListProps) {
+const TicketsList: React.FC<TicketsListProps> = ({ params = {} }) => {
     const [tickets, setTickets] = useState<ITickets[]>([])
     useEffect(() => {
         const data = getTickets(params.currency, params.filters)
@@ -99,3 +99,6 @@ export default function TicketsList({ params = {} }: TicketsListProps) {
         </div>
     )
 }
+
+
+export default TicketsList
